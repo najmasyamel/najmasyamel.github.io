@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+	<link rel="stylesheet"href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" />
+
+	<title>Najma Syamel Collection</title>
+
+	<style>
+		body {
+			font-family: Montserrat;
+			background-image: url('https://images.unsplash.com/photo-1611659934318-06fd70ced53c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80');
+		}
+		
+		.header {
+		  max-width: 1200px;
+		  margin: 0 auto;
+		  padding: 1rem;
+		  display: flex;
+		  align-items: center;
+		  justify-content: center;
+		  height: calc(100vh - 4rem);
+		}
+
+		.title-wrapper {
+		  font-family: Poppins;
+		  display: grid;
+		  align-items: center;
+		  justify-content: center;
+		  margin-bottom: 1rem;
+		}
+
+		.top-title {
+		  font-family: "Playfair Display";
+		  order: 1;
+		  text-align: center;
+		  display: block;
+		  color: #fff;
+		  font-size: clamp(1rem, 4vw, 1.5rem);
+		  margin-bottom: 1rem;
+		  margin-top: 1rem;
+		}
+
+		.sweet-title {
+		  order: 2;
+		  color: #e5e5e5;
+		  font-weight: 900;
+		  text-transform: uppercase;
+		  font-size: clamp(1rem, 8vw, 3rem);
+		  line-height: 0.75em;
+		  text-align: center;
+		  text-shadow: 3px 1px 1px #a5a5a5, 2px 2px 1px #777777, 4px 2px 1px #a5a5a5,
+			3px 3px 1px #777777, 5px 3px 1px #a5a5a5, 4px 4px 1px #777777,
+			6px 4px 1px #a5a5a5, 5px 5px 1px #777777, 7px 5px 1px #a5a5a5,
+			6px 6px 1px #777777, 8px 6px 1px #a5a5a5, 7px 7px 1px #777777,
+			9px 7px 1px #a5a5a5;
+
+		  span {
+			display: block;
+			position: relative;
+		  }
+		}
+	
+		thead {
+			background: #231193;
+            color: white;
+		}
+		
+		tbody {
+			background: #eaeaea;
+		}
+
+        .button {
+              background-color: #489863;
+              border: none;
+              color: white;
+              padding: 10px 20px;
+              text-align: center;
+              text-decoration: none;
+              display: inline-block;
+              font-size: 16px;
+              transition-duration: 0.4s;
+              cursor: pointer;
+            }
+
+	</style>
+</head>
+
+<body>
+	<div class="container">
+	
+		<div class="title-wrapper">
+			<h1 class="sweet-title">
+			  <span data-text="Najma">Najma</span>
+			  <span data-text="Syamel">Syamel</span>
+			</h1>
+			<span class="top-title">Collection</span>
+		</div>
+		
+    <input class="form-control" id="myInput" type="text" placeholder="Cari nomor produk">
+  <br>
+		<table class="table table-bordered table-striped">
+    <thead>
+      <tr>
+        <th>Nomor Produk</th>
+        <th>Nama Produk</th>
+        <th>Klik Beli</th>
+      </tr>
+    </thead>
+    <tbody id="myTable">
+      <tr>
+        <td>1</td>
+        <td>Blouse Vintage</td>
+        <td><button onclick="produk1()" class="button button1">Beli</button></td>
+      </tr>
+      <tr>
+        <td>2</td>
+        <td>Rok Plisket Motif Premium</td>
+        <td><button onclick="produk2()" class="button button1">Beli</button></td>
+      </tr>
+      <tr>
+        <td>3</td>
+        <td>Belle cardigan</td>
+        <td><button onclick="produk3()" class="button button1">Beli</button></td>
+      </tr>
+      <tr>
+        <td>4</td>
+        <td>Dress Floral Korean</td>
+        <td><button onclick="produk4()" class="button button1">Beli</button></td>
+      </tr>
+       <tr>
+        <td>5</td>
+        <td>Kulot Knit Premium</td>
+        <td><button onclick="produk5()" class="button button1">Beli</button></td>
+      </tr>
+	  <tr>
+        <td>6</td>
+        <td>Korean Fake Cardigan</td>
+        <td><button onclick="produk6()" class="button button1">Beli</button></td>
+      </tr>
+      <tr>
+        <td>7</td>
+        <td>Celana Kargo</td>
+        <td><button onclick="produk7()" class="button button1">Beli</button></td>
+      </tr>
+      <tr>
+        <td>8</td>
+        <td>Kemeja Panjang</td>
+        <td><button onclick="produk8()" class="button button1">Beli</button></td>
+      </tr>
+      <tr>
+        <td>9</td>
+        <td>Rok Kargo Serut</td>
+        <td><button onclick="produk9()" class="button button1">Beli</button></td>
+      </tr>
+       <tr>
+        <td>10</td>
+        <td>Rok Kotak-Kotak</td>
+        <td><button onclick="produk10()" class="button button1">Beli</button></td>
+      </tr>
+	  <tr>
+        <td>11</td>
+        <td>Rok Kotak-Kotak</td>
+        <td><button onclick="produk11()" class="button button1">Beli</button></td>
+      </tr>
+      <tr>
+        <td>12</td>
+        <td>Dress Silk</td>
+        <td><button onclick="produk12()" class="button button1">Beli</button></td>
+      </tr>
+      <tr>
+        <td>13</td>
+        <td>Inner Long Dress Tanpa Lengan</td>
+        <td><button onclick="produk13()" class="button button1">Beli</button></td>
+      </tr>
+      <tr>
+        <td>14</td>
+        <td>Outer Scarf</td>
+        <td><button onclick="produk14()" class="button button1">Beli</button></td>
+      </tr>
+       <tr>
+        <td>15</td>
+        <td>Outer Pink</td>
+        <td><button onclick="produk15()" class="button button1">Beli</button></td>
+      </tr>
+	  <tr>
+        <td>16</td>
+        <td>Kanvas Totebag</td>
+        <td><button onclick="produk16()" class="button button1">Beli</button></td>
+      </tr>
+      <tr>
+        <td>17</td>
+        <td>Totebag Coklat</td>
+        <td><button onclick="produk17()" class="button button1">Beli</button></td>
+      </tr>
+      <tr>
+        <td>18</td>
+        <td>Tas Selempang Jerami</td>
+        <td><button onclick="produk18()" class="button button1">Beli</button></td>
+      </tr>
+      <tr>
+        <td>19</td>
+        <td>Slingbag Coklat</td>
+        <td><button onclick="produk19()" class="button button1">Beli</button></td>
+      </tr>
+    </tbody>
+	</div>
+    
+    <script>    
+    	$(document).ready(function(){
+		$("#myInput").on("keyup", function() {
+        var value = $(this).val().toLowerCase();
+        $("#myTable tr").filter(function() {
+          $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+        });
+      });
+    });
+    
+    
+      function produk1() {
+      window.open("https://shope.ee/7f7XuGDVwh", "_blank");
+      }
+      function produk2() {
+      window.open("https://shope.ee/6KcAUHB8A8", "_blank");
+      }
+       function produk3() {
+      window.open("https://shope.ee/7KUhgVK6o4", "_blank");
+      }
+       function produk4() {
+      window.open("https://shope.ee/9escTJxtb1", "_blank");
+      }
+       function produk5() {
+      window.open("https://shope.ee/4AXfvepvN2", "_blank");
+      }
+	  function produk6() {
+      window.open("https://shope.ee/5V34l9zrnH", "_blank");
+      }
+      function produk7() {
+      window.open("https://shope.ee/5V34lMTjgA", "_blank");
+      }
+       function produk8() {
+      window.open("https://shope.ee/8UggLl9MkR", "_blank");
+      }
+       function produk9() {
+      window.open("https://shope.ee/6pYSSKOK7L", "_blank");
+      }
+       function produk10() {
+      window.open("https://shope.ee/8f06egWiHj", "_blank");
+      }
+	  function produk11() {
+      window.open("https://shope.ee/8UggSWXhQG", "_blank");
+      }
+      function produk12() {
+      window.open("https://shope.ee/4VAZSH9C3F", "_blank");
+      }
+       function produk13() {
+      window.open("https://shope.ee/5zzNFeA8Dnn", "_blank");
+      }
+       function produk14() {
+      window.open("https://shope.ee/fxquoNnUp", "_blank");
+      }
+       function produk15() {
+      window.open("https://shope.ee/1q9oJFpkd0", "_blank");
+      }
+	  function produk16() {
+      window.open("https://shope.ee/506q5d7xUv", "_blank");
+      }
+      function produk17() {
+      window.open("https://shope.ee/fxsEfJhXU", "_blank");
+      }
+       function produk18() {
+      window.open("https://shope.ee/2VPWR6lAzL", "_blank");
+      }
+       function produk19() {
+      window.open("https://shope.ee/B1bexDJ6w", "_blank");
+      }
+
+  </script>
+</body>
+
+</html>
